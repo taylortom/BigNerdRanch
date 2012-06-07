@@ -17,6 +17,17 @@ int main(int argc, const char * argv[])
         // the list of items
         NSMutableArray* items = [[NSMutableArray alloc] init];
         
+        TTItem* backpack = [[TTItem alloc] init];
+        [backpack setItemName:@"Backpack"];
+        [items addObject:backpack];
+        
+        TTItem* calculator = [[TTItem alloc] init];
+        [calculator setItemName:@"Calculator"];
+        [items addObject:calculator];
+        
+        [backpack setContainedItem:calculator];
+
+        
         // create some items
         int totalItems = 25;
         for(int i = 0; i < totalItems; i++)

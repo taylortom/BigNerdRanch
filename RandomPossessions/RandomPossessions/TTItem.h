@@ -10,25 +10,18 @@
 
 @interface TTItem : NSObject
 {
-    NSString* itemName;
-    NSString* serialNumber;
-    int valueInPounds;
-    NSDate* dateCreated;
 }
 
 +(id)randomItem;
 
 -(id)initWithItemName:(NSString*)_itemName valueInPounds:(int)_valueInPounds serialNumber:(NSString*)_serialNumber;
 
--(void)setItemName:(NSString*)_itemName;
--(NSString*)itemName;
+@property (nonatomic, strong) TTItem* containedItem;
+@property (nonatomic, weak) TTItem* container;
 
--(void)setSerialNumber:(NSString*)_serialNumber;
--(NSString*)serialNumber;
-
--(void)setValueInPounds:(int)_valueInPounds;
--(int)valueInPounds;
-
--(NSDate*)dateCreated;
+@property (nonatomic, copy) NSString* itemName;
+@property (nonatomic, copy) NSString* serialNumber;
+@property (nonatomic) int valueInPounds;
+@property (nonatomic, readonly, strong) NSDate* dateCreated;
 
 @end

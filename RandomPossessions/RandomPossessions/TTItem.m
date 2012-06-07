@@ -9,6 +9,7 @@
 #import "TTItem.h"
 
 @implementation TTItem
+@synthesize itemName, containedItem, container, serialNumber, valueInPounds, dateCreated;
 
 +(id)randomItem
 {
@@ -76,59 +77,12 @@
 }
 
 /**
- * Sets the item's name
+ * Sets the contained items
  */
--(void)setItemName:(NSString*)_itemName
+-(void)setContainedItem:(TTItem*)_item
 {
-    itemName = _itemName;
-}
-
-/**
- * Returns the item's name
- */
--(NSString*)itemName
-{
-    return itemName;
-}
-
-/**
- * Sets the item's serial number
- */
--(void)setSerialNumber:(NSString*)_serialNumber
-{
-    serialNumber = _serialNumber;
-}
-
-/**
- * Returns the item's serial number
- */
--(NSString*)serialNumber
-{
-    return serialNumber;
-}
-
-/**
- * Sets the item's value
- */
--(void)setValueInPounds:(int)_valueInPounds
-{
-    valueInPounds = _valueInPounds;
-}
-
-/**
- * Returns the item's value
- */
--(int)valueInPounds
-{
-    return valueInPounds;
-}
-
-/**
- * Returns the date that the item was created
- */
--(NSDate*)dateCreated
-{
-    return dateCreated;
+    containedItem = _item;
+    [_item setContainer:self];
 }
 
 @end
