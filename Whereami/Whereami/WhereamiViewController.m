@@ -14,6 +14,11 @@
 
 @implementation WhereamiViewController
 
+-(void)dealloc
+{
+    [locationManager setDelegate:nil];
+}
+
 -(id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -22,7 +27,7 @@
     {
         // initialise the object
         locationManager = [[CLLocationManager alloc] init];
-        
+                
         // set the delegate (gives warning)
         [locationManager setDelegate:self];
         
