@@ -3,7 +3,7 @@
 //  Whereami
 //
 //  Created by Thomas Taylor on 08/06/2012.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+//  Copyright (c) 2012 taylortom. All rights reserved.
 //
 
 #import "WhereamiViewController.h"
@@ -27,15 +27,20 @@
     {
         // initialise the object
         locationManager = [[CLLocationManager alloc] init];
-                
-        // set the delegate (gives warning)
+        
+        // set the delegate
         [locationManager setDelegate:self];
         
-        // set the accuracy
+        // set the accuracy and sensitivity
         [locationManager setDesiredAccuracy:kCLLocationAccuracyBest];
+        [locationManager setDistanceFilter:50];
         
         // start the location checker
         [locationManager startUpdatingLocation];
+        
+        // start the heading checker (providing devices supports it...)
+        if([CLLocationManager headingAvailable]) [locationManager startUpdatingHeading];
+        else NSLog(@"Uh-oh, device doesn't have a compass...");
     }
     
     return self;
@@ -44,6 +49,11 @@
 -(void)locationManager:(CLLocationManager*)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
 {
     NSLog(@"didUpdateToLocation: %@", newLocation);
+}
+
+-(void)locationManager:(CLLocationManager *)manager didUpdateHeading:(CLHeading *)newHeading
+{
+    NSLog(@"didUpdateHeading: %@", newHeading);
 }
 
 -(void)locationManager:(CLLocationManager*)manager didFailWithError:(NSError *)error
