@@ -6,12 +6,16 @@
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import <CoreLocation/CoreLocation.h>
+#import <MapKit/MapKit.h>
 #import <UIKit/UIKit.h>
 
-@interface WhereamiViewController : UIViewController <CLLocationManagerDelegate>
+@interface WhereamiViewController : UIViewController <CLLocationManagerDelegate, MKMapViewDelegate>
 {
     CLLocationManager* locationManager;
+    
+    IBOutlet MKMapView* worldView;
+    IBOutlet UIActivityIndicatorView* activityIndicator;
+    IBOutlet UITextField* locationTitleField;
 }
 
 @end

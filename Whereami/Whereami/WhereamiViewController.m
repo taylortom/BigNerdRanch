@@ -35,15 +35,24 @@
         [locationManager setDesiredAccuracy:kCLLocationAccuracyBest];
         [locationManager setDistanceFilter:50];
         
-        // start the location checker
-        [locationManager startUpdatingLocation];
-        
         // start the heading checker (providing devices supports it...)
+        [locationManager setHeadingFilter:90];
         if([CLLocationManager headingAvailable]) [locationManager startUpdatingHeading];
-        else NSLog(@"Uh-oh, device doesn't have a compass...");
+        else NSLog(@"Warning: heading updates unavailable");
     }
     
     return self;
+}
+
+-(void)viewDidLoad
+{
+    [worldView setShowsUserLocation:YES];
+}
+
+-(void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation
+{    
+    MKCoordinateRegion zoomRegion = MKCoordinateRegionMakeWithDistance(userLocation.coordinate, 250, 250);
+    [worldView setRegion:zoomRegion animated:YES];
 }
 
 -(void)locationManager:(CLLocationManager*)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
