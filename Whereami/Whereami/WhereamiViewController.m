@@ -24,7 +24,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     
     if(self)
-    {
+    {        
         // initialise the object
         locationManager = [[CLLocationManager alloc] init];
         
@@ -108,6 +108,20 @@
     [activityIndicator stopAnimating];
     [locationTitleField setHidden:NO];
     [locationManager stopUpdatingLocation];
+}
+
+/**
+ * Updates the segmented controller
+ */
+- (IBAction)onSegmentedControlUpdated:(UISegmentedControl*)sender
+{    
+    MKMapType mapType = MKMapTypeStandard;
+    
+    if(sender.selectedSegmentIndex == 1) mapType = MKMapTypeSatellite;
+    else if(sender.selectedSegmentIndex == 2) mapType = MKMapTypeHybrid;
+    
+    if([worldView mapType] != mapType) [worldView setMapType:mapType];
+    [self findLocation];
 }
 
 @end
