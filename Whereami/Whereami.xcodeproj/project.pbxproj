@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E23519E11584F84200EE8B15 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E23519E01584F84200EE8B15 /* MapKit.framework */; };
+		E2351A291585643200EE8B15 /* TTMapPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = E2351A281585643200EE8B15 /* TTMapPoint.m */; };
 		E25B121E1582AB25001E8845 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E25B121D1582AB25001E8845 /* UIKit.framework */; };
 		E25B12201582AB25001E8845 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E25B121F1582AB25001E8845 /* Foundation.framework */; };
 		E25B12221582AB25001E8845 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E25B12211582AB25001E8845 /* CoreGraphics.framework */; };
@@ -21,6 +22,8 @@
 
 /* Begin PBXFileReference section */
 		E23519E01584F84200EE8B15 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		E2351A271585643200EE8B15 /* TTMapPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTMapPoint.h; sourceTree = "<group>"; };
+		E2351A281585643200EE8B15 /* TTMapPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTMapPoint.m; sourceTree = "<group>"; };
 		E25B12191582AB25001E8845 /* Whereami.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Whereami.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E25B121D1582AB25001E8845 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		E25B121F1582AB25001E8845 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -87,6 +90,8 @@
 			children = (
 				E25B122C1582AB25001E8845 /* WhereamiAppDelegate.h */,
 				E25B122D1582AB25001E8845 /* WhereamiAppDelegate.m */,
+				E2351A271585643200EE8B15 /* TTMapPoint.h */,
+				E2351A281585643200EE8B15 /* TTMapPoint.m */,
 				E25B122F1582AB25001E8845 /* WhereamiViewController.h */,
 				E25B12301582AB25001E8845 /* WhereamiViewController.m */,
 				E25B12321582AB25001E8845 /* WhereamiViewController.xib */,
@@ -172,6 +177,7 @@
 				E25B122A1582AB25001E8845 /* main.m in Sources */,
 				E25B122E1582AB25001E8845 /* WhereamiAppDelegate.m in Sources */,
 				E25B12311582AB25001E8845 /* WhereamiViewController.m in Sources */,
+				E2351A291585643200EE8B15 /* TTMapPoint.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

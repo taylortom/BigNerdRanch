@@ -7,9 +7,10 @@
 //
 
 #import <MapKit/MapKit.h>
+#import "TTMapPoint.h"
 #import <UIKit/UIKit.h>
 
-@interface WhereamiViewController : UIViewController <CLLocationManagerDelegate, MKMapViewDelegate>
+@interface WhereamiViewController : UIViewController <CLLocationManagerDelegate, MKMapViewDelegate, UITextFieldDelegate>
 {
     CLLocationManager* locationManager;
     
@@ -17,5 +18,8 @@
     IBOutlet UIActivityIndicatorView* activityIndicator;
     IBOutlet UITextField* locationTitleField;
 }
+
+-(void)findLocation;
+-(void)foundLocation:(CLLocation*)_location;
 
 @end
