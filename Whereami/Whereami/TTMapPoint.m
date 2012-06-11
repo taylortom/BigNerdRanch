@@ -18,8 +18,11 @@
     
     if(self)
     {
+        date = [[NSDate alloc] init];
+        NSString* annotation = [NSString stringWithFormat:@"%@ (%@)", _title, [self getDate]];
+        
         coordinate = _coord;
-        [self setTitle:_title];
+        [self setTitle:annotation];
     }
     
     return self;
@@ -28,6 +31,14 @@
 -(id)init
 {
     return [self initWithCoordinate:CLLocationCoordinate2DMake(43.07, -89.32) title:@"Hometown"];
+}
+
+-(NSString*)getDate
+{
+    NSDateFormatter* format = [[NSDateFormatter alloc] init];
+    [format setTimeStyle:NSDateFormatterNoStyle];
+    [format setDateStyle:NSDateFormatterMediumStyle];
+    return [format stringFromDate:date];
 }
 
 @end

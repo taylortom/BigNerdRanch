@@ -11,10 +11,14 @@
 #import <MapKit/MapKit.h>
 
 @interface TTMapPoint : NSObject <MKAnnotation>
+{
+    NSDate* date;
+}
 
 @property (nonatomic, readonly) CLLocationCoordinate2D coordinate;
 @property (nonatomic, copy) NSString* title;
 
 -(id)initWithCoordinate:(CLLocationCoordinate2D)_coord title:(NSString*)_title;
+-(NSString*)getDate;
 
 @end
