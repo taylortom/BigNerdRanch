@@ -14,6 +14,8 @@
 		E2B0563715877CB5009F769E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E2B0563615877CB5009F769E /* main.m */; };
 		E2B0563B15877CB5009F769E /* HypnosisterAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E2B0563A15877CB5009F769E /* HypnosisterAppDelegate.m */; };
 		E2B0564615878580009F769E /* HypnosisView.m in Sources */ = {isa = PBXBuildFile; fileRef = E2B0564515878580009F769E /* HypnosisView.m */; };
+		E2B056501587B237009F769E /* LogoView.m in Sources */ = {isa = PBXBuildFile; fileRef = E2B0564F1587B237009F769E /* LogoView.m */; };
+		E2B056521587FA33009F769E /* applelogo.png in Resources */ = {isa = PBXBuildFile; fileRef = E2B056511587FA33009F769E /* applelogo.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,9 @@
 		E2B0563A15877CB5009F769E /* HypnosisterAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HypnosisterAppDelegate.m; sourceTree = "<group>"; };
 		E2B0564415878580009F769E /* HypnosisView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HypnosisView.h; path = ../HypnosisView.h; sourceTree = "<group>"; };
 		E2B0564515878580009F769E /* HypnosisView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HypnosisView.m; path = ../HypnosisView.m; sourceTree = "<group>"; };
+		E2B0564E1587B237009F769E /* LogoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogoView.h; sourceTree = "<group>"; };
+		E2B0564F1587B237009F769E /* LogoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogoView.m; sourceTree = "<group>"; };
+		E2B056511587FA33009F769E /* applelogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = applelogo.png; path = ../../../../Users/tom/Desktop/applelogo.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,8 +80,11 @@
 		E2B0563015877CB5009F769E /* Hypnosister */ = {
 			isa = PBXGroup;
 			children = (
+				E2B056511587FA33009F769E /* applelogo.png */,
 				E2B0563915877CB5009F769E /* HypnosisterAppDelegate.h */,
 				E2B0563A15877CB5009F769E /* HypnosisterAppDelegate.m */,
+				E2B0564E1587B237009F769E /* LogoView.h */,
+				E2B0564F1587B237009F769E /* LogoView.m */,
 				E2B0564415878580009F769E /* HypnosisView.h */,
 				E2B0564515878580009F769E /* HypnosisView.m */,
 				E2B0563115877CB5009F769E /* Supporting Files */,
@@ -147,6 +155,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E2B0563515877CB5009F769E /* InfoPlist.strings in Resources */,
+				E2B056521587FA33009F769E /* applelogo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -160,6 +169,7 @@
 				E2B0563715877CB5009F769E /* main.m in Sources */,
 				E2B0563B15877CB5009F769E /* HypnosisterAppDelegate.m in Sources */,
 				E2B0564615878580009F769E /* HypnosisView.m in Sources */,
+				E2B056501587B237009F769E /* LogoView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,6 +273,7 @@
 				E2B0564015877CB5009F769E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -8,6 +8,7 @@
 
 #import "HypnosisterAppDelegate.h"
 #import "HypnosisView.h"
+#import "LogoView.h"
 
 @implementation HypnosisterAppDelegate
 
@@ -39,6 +40,10 @@
     BOOL success = [view becomeFirstResponder];
     if(success) NSLog(@"HypnosisView became the first responder");
     else NSLog(@"HypnosisView could NOT become the first responder");
+    
+    CGRect logoFrame = CGRectMake(10, 10, 300, 368);
+    LogoView* logoView = [[LogoView alloc] initWithFrame:logoFrame];
+    [scrollView addSubview:logoView];
     
     // window setting
     self.window.backgroundColor = [UIColor whiteColor];
