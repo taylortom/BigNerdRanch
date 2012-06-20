@@ -18,12 +18,17 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    // set the root view controller
+    // create the controllers
     HypnosisViewController* hvc = [[HypnosisViewController alloc] init];
     TimeViewController* tvc = [[TimeViewController alloc] init];
     
-    //[[self window] setRootViewController:hvc];
-    [[self window] setRootViewController:tvc];
+    // set up the tab bar
+    UITabBarController* tbc = [[UITabBarController alloc] init];
+    NSArray* viewControllers = [NSArray arrayWithObjects:hvc, tvc, nil];
+    [tbc setViewControllers:viewControllers];
+    
+    // set the root
+    [[self window] setRootViewController:tbc];
     
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
