@@ -21,6 +21,10 @@
 		E29301631591F6C000B47F10 /* Hypno@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E293015F1591F6C000B47F10 /* Hypno@2x.png */; };
 		E29301641591F6C000B47F10 /* Time.png in Resources */ = {isa = PBXBuildFile; fileRef = E29301601591F6C000B47F10 /* Time.png */; };
 		E29301651591F6C000B47F10 /* Time@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E29301611591F6C000B47F10 /* Time@2x.png */; };
+		E2930183159202BD00B47F10 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2930181159202BD00B47F10 /* MapViewController.m */; };
+		E2930184159202BD00B47F10 /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2930182159202BD00B47F10 /* MapViewController.xib */; };
+		E29301881592037800B47F10 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E29301871592037800B47F10 /* CoreLocation.framework */; };
+		E293018A159204FA00B47F10 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2930189159204FA00B47F10 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +49,11 @@
 		E293015F1591F6C000B47F10 /* Hypno@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Hypno@2x.png"; sourceTree = "<group>"; };
 		E29301601591F6C000B47F10 /* Time.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Time.png; sourceTree = "<group>"; };
 		E29301611591F6C000B47F10 /* Time@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Time@2x.png"; sourceTree = "<group>"; };
+		E2930180159202BD00B47F10 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		E2930181159202BD00B47F10 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		E2930182159202BD00B47F10 /* MapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
+		E29301871592037800B47F10 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		E2930189159204FA00B47F10 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +61,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E293018A159204FA00B47F10 /* MapKit.framework in Frameworks */,
+				E29301881592037800B47F10 /* CoreLocation.framework in Frameworks */,
 				E200D3C8158E28AF0074B8EC /* UIKit.framework in Frameworks */,
 				E200D3CA158E28AF0074B8EC /* Foundation.framework in Frameworks */,
 				E200D3CC158E28AF0074B8EC /* CoreGraphics.framework in Frameworks */,
@@ -64,6 +75,7 @@
 		E200D3B8158E28AF0074B8EC = {
 			isa = PBXGroup;
 			children = (
+				E2930189159204FA00B47F10 /* MapKit.framework */,
 				E200D3CD158E28AF0074B8EC /* Hypnotime */,
 				E200D3C6158E28AF0074B8EC /* Frameworks */,
 				E200D3C4158E28AF0074B8EC /* Products */,
@@ -81,6 +93,7 @@
 		E200D3C6158E28AF0074B8EC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E29301871592037800B47F10 /* CoreLocation.framework */,
 				E200D3C7158E28AF0074B8EC /* UIKit.framework */,
 				E200D3C9158E28AF0074B8EC /* Foundation.framework */,
 				E200D3CB158E28AF0074B8EC /* CoreGraphics.framework */,
@@ -91,19 +104,12 @@
 		E200D3CD158E28AF0074B8EC /* Hypnotime */ = {
 			isa = PBXGroup;
 			children = (
-				E293015E1591F6C000B47F10 /* Hypno.png */,
-				E293015F1591F6C000B47F10 /* Hypno@2x.png */,
-				E29301601591F6C000B47F10 /* Time.png */,
-				E29301611591F6C000B47F10 /* Time@2x.png */,
+				E2930185159202C900B47F10 /* Assets */,
 				E293014E15913F4B00B47F10 /* HypnosisView.h */,
 				E293014F15913F4B00B47F10 /* HypnosisView.m */,
 				E200D3D6158E28B00074B8EC /* HypnotimeAppDelegate.h */,
 				E200D3D7158E28B00074B8EC /* HypnotimeAppDelegate.m */,
-				E29301541591439300B47F10 /* TimeViewController.xib */,
-				E2930151159142B100B47F10 /* TimeViewController.h */,
-				E2930152159142B100B47F10 /* TimeViewController.m */,
-				E200D3DE158E29A60074B8EC /* HypnosisViewController.h */,
-				E200D3DF158E29A60074B8EC /* HypnosisViewController.m */,
+				E2930186159202D800B47F10 /* ViewControllers */,
 				E200D3CE158E28B00074B8EC /* Supporting Files */,
 			);
 			path = Hypnotime;
@@ -118,6 +124,32 @@
 				E200D3D5158E28B00074B8EC /* Hypnotime-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E2930185159202C900B47F10 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				E293015E1591F6C000B47F10 /* Hypno.png */,
+				E293015F1591F6C000B47F10 /* Hypno@2x.png */,
+				E29301601591F6C000B47F10 /* Time.png */,
+				E29301611591F6C000B47F10 /* Time@2x.png */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
+		E2930186159202D800B47F10 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E200D3DE158E29A60074B8EC /* HypnosisViewController.h */,
+				E200D3DF158E29A60074B8EC /* HypnosisViewController.m */,
+				E2930180159202BD00B47F10 /* MapViewController.h */,
+				E2930181159202BD00B47F10 /* MapViewController.m */,
+				E2930182159202BD00B47F10 /* MapViewController.xib */,
+				E2930151159142B100B47F10 /* TimeViewController.h */,
+				E2930152159142B100B47F10 /* TimeViewController.m */,
+				E29301541591439300B47F10 /* TimeViewController.xib */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,6 +209,7 @@
 				E29301631591F6C000B47F10 /* Hypno@2x.png in Resources */,
 				E29301641591F6C000B47F10 /* Time.png in Resources */,
 				E29301651591F6C000B47F10 /* Time@2x.png in Resources */,
+				E2930184159202BD00B47F10 /* MapViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,6 +225,7 @@
 				E200D3E0158E29A60074B8EC /* HypnosisViewController.m in Sources */,
 				E293015015913F4B00B47F10 /* HypnosisView.m in Sources */,
 				E2930153159142B100B47F10 /* TimeViewController.m in Sources */,
+				E2930183159202BD00B47F10 /* MapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,6 +8,7 @@
 
 #import "HypnotimeAppDelegate.h"
 #import "HypnosisViewController.h"
+#import "MapViewController.h"
 #import "TimeViewController.h"
 
 @implementation HypnotimeAppDelegate
@@ -21,10 +22,11 @@
     // create the controllers
     HypnosisViewController* hvc = [[HypnosisViewController alloc] init];
     TimeViewController* tvc = [[TimeViewController alloc] init];
+    MapViewController* mvc = [[MapViewController alloc] init];
     
     // set up the tab bar
     UITabBarController* tbc = [[UITabBarController alloc] init];
-    NSArray* viewControllers = [NSArray arrayWithObjects:hvc, tvc, nil];
+    NSArray* viewControllers = [NSArray arrayWithObjects:hvc, tvc, mvc, nil];
     [tbc setViewControllers:viewControllers];
     
     // set the root
