@@ -32,8 +32,7 @@
     CGContextAddArc(contextRef, bounds.origin.x+bounds.size.width/2, bounds.origin.y+bounds.size.height/2, 150, 0.0, M_PI*2, YES);
     CGContextClip(contextRef);
     
-    NSString* logoName = [[NSBundle mainBundle] pathForResource:@"applelogo" ofType:@"png"];
-    UIImage* logo = [[UIImage alloc] initWithContentsOfFile:logoName];
+    UIImage* logo = [UIImage imageNamed:@"logo.png"];
     CGPoint logoPoint = CGPointMake(bounds.origin.x+bounds.size.width/2-75, bounds.origin.y+bounds.size.height/2-75);
     [logo drawAtPoint:logoPoint];
     
