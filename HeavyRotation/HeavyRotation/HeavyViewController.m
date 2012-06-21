@@ -16,4 +16,16 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait || UIInterfaceOrientationIsLandscape(interfaceOrientation));
 }
 
+-(void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
+{    
+    if(UIInterfaceOrientationIsPortrait(toInterfaceOrientation))
+    {
+        [twoButton setCenter: CGPointMake(160, 421.5)];
+    }
+    else if(UIInterfaceOrientationIsLandscape(toInterfaceOrientation))
+    {
+        [twoButton setCenter: CGPointMake(57, 150)];        
+    }
+}
+
 @end

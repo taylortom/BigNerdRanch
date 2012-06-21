@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface HeavyViewController : UIViewController
-
+{
+    __weak IBOutlet UIButton* twoButton;
+}
+    
 @end

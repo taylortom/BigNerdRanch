@@ -20,8 +20,10 @@
     // start watching for device orientation changes
     UIDevice* device = [UIDevice currentDevice];
     [device beginGeneratingDeviceOrientationNotifications];
+    [device setProximityMonitoringEnabled:YES];
     NSNotificationCenter* nc = [NSNotificationCenter defaultCenter];
     [nc addObserver:self selector:@selector(orientationChanged:) name:UIDeviceOrientationDidChangeNotification object:device];
+    [nc addObserver:self selector:@selector(proximityStateChanged:) name:UIDeviceProximityStateDidChangeNotification object:device];
     
     HeavyViewController* hvc = [[HeavyViewController alloc] init];
     [[self window] setRootViewController:hvc];
@@ -62,6 +64,11 @@
 {
     // log the constant that represents the current orientation
     NSLog(@"Orientation changed: %d", [[note object] orientation]);
+}
+
+-(void)proximityStateChanged:(NSNotification*)note
+{
+    NSLog(@"Proximity state has changed");
 }
 
 @end
